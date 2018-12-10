@@ -1,42 +1,32 @@
-#!/bin/python3
-
-import os
-
-
 # Complete the countingValleys function below.
 def countingValleys(n, s):
 
-    # if __name__ == '__main__':
-    #     fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    #     n = int(input())
-    #     s = input()
-    level = 0
+    elevation = 0
     valleys = 0
     first_time_valley = None
     for step in s:
         if 'D' in step:
-            level -= 1
-            print(level)
-            if level == -2:
+            elevation -= 1
+            print(elevation)
+            if elevation == -1:
                 first_time_valley = True
         elif 'U' in step:
-            level += 1
-            print(level)
+            elevation += 1
+            print(elevation)
             if first_time_valley is True:
-                if level == 0:
+                if elevation == 0:
                     first_time_valley = False
                     valleys += 1
-
-    print("You have walked through " + str(valleys) + " valleys.")
-
-
-# result = countingValleys(n, s)
-# fptr.write(str(result) + '\n')
-
-    #     # fptr.close()
-    # print(level)
+    valleys = "You have walked through " + str(valleys) + ' valleys.'
+    return valleys
 
 
-countingValleys(8, ['D', 'D', 'D', 'U', 'U', 'U'])
-# countingValleys(8, ['U', 'D', 'D', 'D', 'U', 'D', 'U', 'U'])
+# print(countingValleys(8, ['U', 'D', 'D', 'D', 'U', 'D', 'U', 'U']))
+print(countingValleys(10, ['D', 'U', 'D', 'D', 'D', 'U', 'U', 'D', 'U', 'U']))
+
+# \/\       /
+#     \. /\/
+#      \/.
+# D is a step down and U is a step up. A valley is only complete if going from
+# sea level (i.e. elevation 0) down at least two consecutive sgeps and then
+# back up to sea level again.
