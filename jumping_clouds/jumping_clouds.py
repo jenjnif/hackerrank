@@ -6,37 +6,35 @@
 # import re
 # import sys
 
-# Complete the jumpingOnClouds function below.
+# Complete the jumpingOnClouds function below
 
 
 def jumpingOnClouds(c):
 
     jumps = 0
-    skip = None
 
-    for steps in range(len(c)):
-        print(c[steps])
-        if c[steps] == 0:
-            if skip is True:
-                jumps += 1
-                skip = False
-                print('plus a jump ' + str(jumps))
-            else:
-                skip = True
-        else:
-            if skip is False:
-                jumps += 2
-                print('plus two jumps ' + str(jumps))
-            else:
-                jumps += 1
-                print('plus a jump ' + str(jumps))
+    while len(c):
+        if (len(c)) == 1:
+            break
+        if c[0] == 0:
+            jumps += 1
+            c.pop(0)
+            if (len(c)) > 1:
+                c.pop(0)
+        if c[0] == 1:
+            jumps += 1
+            c.pop(0)
 
     print('Emma does ' + str(jumps) + ' jumps')
     return jumps
 
-
+# 3
+# jumpingOnClouds([0, 0, 0, 0, 0, 0, 0])
+# 4
 # jumpingOnClouds([0, 0, 1, 0, 0, 1, 0])
+# 3
 # jumpingOnClouds([0, 0, 0, 0, 1, 0])
+# 3
 jumpingOnClouds([0, 1, 0, 0, 1, 0])
 
 # if __name__ == '__main__':
