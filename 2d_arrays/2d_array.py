@@ -11,7 +11,7 @@ def hourglassSum(arr):
 
 
 def find_my_hourglass(x, y, arr):
-    pass 
+    return arr[(y * 6) + x]
 
 
 '''
