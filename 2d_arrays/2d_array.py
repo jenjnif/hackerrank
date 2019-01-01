@@ -10,8 +10,10 @@ def hourglassSum(arr):
     pass
 
 
-def find_coordinates(arr):
+def find_coordinates(width, index):
     pass
+
+    # return x, y
 
 
 def find_my_cell(x, y, arr):
@@ -46,4 +48,4 @@ def test_find_any_number():
 
 
 def test_find_coordinates():
-    assert find_coordinates(arr[3]) == 1
+    assert find_coordinates(6, 3) == (3, 0)
