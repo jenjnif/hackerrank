@@ -11,9 +11,14 @@ def hourglassSum(arr):
 
 
 def find_coordinates(width, index):
-    pass
 
-    # return x, y
+    x = index % 6
+    y = index // 6
+    index += 1
+
+    coordinates = (x, y)
+    print(coordinates)
+    return coordinates
 
 
 def find_my_cell(x, y, arr):
@@ -43,9 +48,13 @@ grid is:
 
 # Test that I can list all the cells in the hourglass for each example
 # position in the grid
-def test_find_any_number():
+def test_find_any_cell():
     assert find_my_cell(3, 1, arr) == 4
 
 
 def test_find_coordinates():
     assert find_coordinates(6, 3) == (3, 0)
+
+
+def test_find_coordinates():
+    assert find_coordinates(6, 16) == (4, 2)
