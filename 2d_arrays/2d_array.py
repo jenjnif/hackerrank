@@ -52,9 +52,9 @@ def test_find_any_cell():
     assert find_my_cell(3, 1, arr) == 4
 
 
-def test_find_coordinates():
+def test_find_coordinates_one():
     assert find_coordinates(6, 3) == (3, 0)
 
 
-def test_find_coordinates():
+def test_find_coordinates_two():
     assert find_coordinates(6, 16) == (4, 2)
