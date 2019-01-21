@@ -51,7 +51,7 @@ def find_my_hourglass(coordinates, arr):
     return hourglass
 
 
-def hourglassSum(hourglass, arr):
+def hourglassSum(arr):
     pass
 
 
