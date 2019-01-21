@@ -92,4 +92,4 @@ def test_find_hourglass():
 
 
 def test_hourglassSum():
-    assert hourglassSum(arr) == [-9, -9, -9, -9, -9, -9, -9]
+    assert hourglassSum(arr) == 25
