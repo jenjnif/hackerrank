@@ -11,5 +11,16 @@ def find_width(arr):
     return width
 
 
+def find_coordinates(index):
+    pass
+
+
+# TESTS
+
+
 def test_width():
     assert find_width(arr) == 6
+
+
+def test_coordinates():
+    assert find_coordinates(arr[3]) == (3, 0)
