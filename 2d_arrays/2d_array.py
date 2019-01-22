@@ -21,6 +21,10 @@ def find_coordinates(index):
     return coordinates
 
 
+def find_hourglass(arr, index):
+    pass
+
+
 # TESTS
 
 
@@ -30,3 +34,7 @@ def test_width():
 
 def test_coordinates():
     assert find_coordinates(3) == (3, 0)
+
+
+def test_hourglass():
+    assert find_hourglass(arr, 1) == [-9, -9, -9, -9, -9, -9, -9]
