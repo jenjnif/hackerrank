@@ -21,9 +21,30 @@ def find_coordinates(index):
     return coordinates
 
 
-def find_hourglass(arr, index):
-    pass
+def find_hourglass(coordinates):
 
+    hourglass = []
+    x = coordinates[0]
+    y = coordinates[1]
+
+    for i in range(3):
+        hourglass_top = arr[(y * 6) + x]
+        x += 1
+        hourglass.append(hourglass_top)
+
+    y += 1
+    x -= 2
+    for i in range(1):
+        hourglass_middle = arr[(y * 6) + x]
+        hourglass.append(hourglass_middle)
+
+    y += 1
+    x -= 1
+    for i in range(3):
+        hourglass_bottom = arr[(y * 6) + x]
+        x += 1
+        hourglass.append(hourglass_bottom)
+    return hourglass
 
 # TESTS
 
@@ -37,4 +58,4 @@ def test_coordinates():
 
 
 def test_hourglass():
-    assert find_hourglass(arr, 1) == [-9, -9, -9, -9, -9, -9, -9]
+    assert find_hourglass((0, 0)) == [-9, -9, -9, -9, -9, -9, -9]
