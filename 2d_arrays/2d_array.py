@@ -5,6 +5,13 @@ arr = [-9, -9, -9, 1, 1, 1, 0, -9, 0, 4, 3, 2, -9, -9, -9, 1, 2, 3,
 # arr = [[-9, -9, -9, 1, 1, 1], [0, -9, 0, 4, 3, 2], [-9, -9, -9, 1, 2, 3],
 #        [0, 0, 8, 6, 6, 0], [0, 0, 0, -2, 0, 0], [0, 0, 1, 2, 4, 0]]
 
+# 1  2  3  4  5  6
+# 7  8  9  10 11 12
+# 13 14 15 16 17 18
+# 19 20 21 22 23 24
+# 25 26 27 28 29 30
+# 31 32 33 34 35 36
+
 
 def find_coordinates(width, index):
 
@@ -16,7 +23,10 @@ def find_coordinates(width, index):
 
 
 def last_index(arr):
-    pass
+    total_length_list = len(arr)
+    width = total_length_list**(0.5)
+    last_index = int(total_length_list - (2 * width) - 3)
+    return last_index
 
 
 def find_my_cell(coordinates, arr):
