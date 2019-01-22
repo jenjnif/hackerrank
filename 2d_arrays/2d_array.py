@@ -70,20 +70,13 @@ def find_my_hourglass(coordinates, arr):
     return hourglass
 
 
-# def hourglassSum(arr):
+def hourglassSum(arr):
+    pass
 #     index = 0
 #     for position in arr:
 #         h = find_my_hourglass(find_coordinates(6, index), arr)
 #         # sum(h)
 #         index += 1
-
-
-'''
-first hourglass is:
--9 -9 -9
-   -9
--9 -9 -9
-'''
 
 '''
 grid is:
@@ -118,5 +111,5 @@ def test_last_index():
     assert last_index(arr) == 21
 
 
-# def test_hourglassSum():
-#     assert hourglassSum(arr) == 25
+def test_hourglassSum():
+    assert hourglassSum(arr) == 25
