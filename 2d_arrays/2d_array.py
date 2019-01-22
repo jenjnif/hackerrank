@@ -15,6 +15,10 @@ def find_coordinates(width, index):
     return coordinates
 
 
+def last_index(arr):
+    pass
+
+
 def find_my_cell(coordinates, arr):
 
     x = coordinates[0]
@@ -30,9 +34,15 @@ def find_my_hourglass(coordinates, arr):
     y = coordinates[1]
 
     for i in range(3):
-        hourglass_top = arr[(y * 6) + x]
-        x += 1
-        hourglass.append(hourglass_top)
+        if y > 3:
+            return None
+        else:
+            if x > 3 and x < 5:
+                return None
+            else:
+                hourglass_top = arr[(y * 6) + x]
+                x += 1
+                hourglass.append(hourglass_top)
 
     y += 1
     x -= 2
@@ -46,13 +56,16 @@ def find_my_hourglass(coordinates, arr):
         hourglass_bottom = arr[(y * 6) + x]
         x += 1
         hourglass.append(hourglass_bottom)
-
-    print(hourglass)
+    # print(hourglass)
     return hourglass
 
 
-def hourglassSum(arr):
-    pass
+# def hourglassSum(arr):
+#     index = 0
+#     for position in arr:
+#         h = find_my_hourglass(find_coordinates(6, index), arr)
+#         # sum(h)
+#         index += 1
 
 
 '''
@@ -91,5 +104,9 @@ def test_find_hourglass():
     assert find_my_hourglass((0, 0), arr) == [-9, -9, -9, -9, -9, -9, -9]
 
 
-def test_hourglassSum():
-    assert hourglassSum(arr) == 25
+def test_last_index():
+    assert last_index(arr) == 21
+
+
+# def test_hourglassSum():
+#     assert hourglassSum(arr) == 25
