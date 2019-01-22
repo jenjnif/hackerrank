@@ -6,13 +6,19 @@ arr = [-9, -9, -9, 1, 1, 1, 0, -9, 0, 4, 3, 2, -9, -9, -9, 1, 2, 3,
 def find_width(arr):
 
     total_length_list = len(arr)
-    width = total_length_list**(0.5)
+    width = int(total_length_list**(0.5))
 
     return width
 
 
 def find_coordinates(index):
-    pass
+
+    width = find_width(arr)
+    x = int(index % width)
+    y = int(index // width)
+    coordinates = (x, y)
+
+    return coordinates
 
 
 # TESTS
@@ -23,4 +29,4 @@ def test_width():
 
 
 def test_coordinates():
-    assert find_coordinates(arr[3]) == (3, 0)
+    assert find_coordinates(3) == (3, 0)
