@@ -46,6 +46,11 @@ def find_hourglass(coordinates):
         hourglass.append(hourglass_bottom)
     return hourglass
 
+
+def sum_hourglasses():
+    pass
+
+
 # TESTS
 
 
@@ -59,3 +64,7 @@ def test_coordinates():
 
 def test_hourglass():
     assert find_hourglass((0, 0)) == [-9, -9, -9, -9, -9, -9, -9]
+
+
+def test_sum_hourglasses():
+    assert sum_hourglasses() == 25
