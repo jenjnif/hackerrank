@@ -15,3 +15,7 @@ def test_list_first_prime():
 
 def test_list_two_primes():
     assert find_primes(5) == [2, 3]
+
+
+def test_list_all_primes_n():
+    assert find_primes(10) == [2, 3, 5, 7]
