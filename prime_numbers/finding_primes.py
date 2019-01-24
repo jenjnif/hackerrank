@@ -1,6 +1,10 @@
 
 def find_primes(n):
-    pass
+    primes = []
+    for i in range(2, n):
+        primes.append(i)
+        print(primes)
+    return primes
 
 
 def test_list_primes():
