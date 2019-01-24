@@ -1,10 +1,11 @@
 
 def find_primes(n):
-    primes = []
+    primes = [2]
     p = 2
     for i in range(2, n):
-        primes.append(i)
-        print(primes)
+        if i % p != 0:
+            primes.append(i)
+    print(primes)
     return primes
 
 
