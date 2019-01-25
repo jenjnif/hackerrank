@@ -1,3 +1,5 @@
+# finds all primes up to n
+
 
 def find_primes(n):
     primes = []
