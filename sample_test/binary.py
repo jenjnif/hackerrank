@@ -5,9 +5,12 @@
 
 
 def convert_decimal_binary(n):
-    pass
+    bit = []
+    while n > 0:
+        bit.append(n % 2)
+        n = n // 2
+    return bit[::-1]
 
 
-# 10 is 1010
-#       8020
-print(convert_decimal_binary(11))
+# 34 is 100010
+print(convert_decimal_binary(34))
