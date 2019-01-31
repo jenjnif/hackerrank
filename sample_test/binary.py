@@ -14,9 +14,19 @@ def list_binary(n):
 
 
 def decimal_binary(n):
+    binary_number = []
     for i in list_binary(n):
-        print(i)
+        if n - i >= 0:
+            print('n = ', n)
+            print('i = ', i)
+            binary_number.append(1)
+            n -= i
+        else:
+            binary_number.append(0)
+            print('correct?')
+    return binary_number
 
 
-# 10 is 01010
+# 10 is 1010
+#       8020
 print(decimal_binary(10))
